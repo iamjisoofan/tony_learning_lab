@@ -1,0 +1,32 @@
+{
+  "name": "tony-learning-lab",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "辅助孩子学习的工具集，首个功能为听写辅助工具",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc -b --noEmit"
+  },
+  "dependencies": {
+    "@tanstack/react-query": "^5.62.7",
+    "@tanstack/react-router": "^1.87.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@tanstack/react-query-devtools": "^5.62.7",
+    "@tanstack/router-devtools": "^1.87.0",
+    "@tanstack/router-plugin": "^1.87.0",
+    "@types/react": "^19.0.1",
+    "@types/react-dom": "^19.0.1",
+    "@vitejs/plugin-react": "^4.3.4",
+    "typescript": "^5.7.2",
+    "vite": "^6.0.3"
+  },
+  "allowScripts": {
+    "esbuild@0.25.12": true
+  }
+}
