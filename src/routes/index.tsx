@@ -17,7 +17,7 @@ const features: FeatureCard[] = [
     to: '/dictation',
     emoji: '✍️',
     title: '听写辅助',
-    desc: '自动朗读词语，孩子边听边写，支持自定义词单与节奏。',
+    desc: '选择听写资料，自动朗读词条，孩子边听边写，可上一条/下一条、调节奏。',
     ready: true,
   },
   {

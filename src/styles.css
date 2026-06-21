@@ -171,9 +171,31 @@ a {
   color: var(--muted);
 }
 
+.control-wide {
+  grid-column: 1 / -1;
+}
+
+.control-check {
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  color: var(--text);
+}
+
+.control-check input {
+  width: 18px;
+  height: 18px;
+}
+
 .control select,
 .control input[type='range'] {
   width: 100%;
+}
+
+.material-meta {
+  color: var(--muted);
+  font-size: 14px;
+  margin: -8px 0 18px;
 }
 
 .control select {
@@ -228,6 +250,16 @@ a {
   gap: 10px;
   justify-content: center;
   flex-wrap: wrap;
+  align-items: center;
+}
+
+.dictation-actions.secondary {
+  margin-top: 12px;
+}
+
+.btn-play {
+  min-width: 120px;
+  font-weight: 600;
 }
 
 .btn {
@@ -278,10 +310,62 @@ a {
 }
 
 .word-review ol {
-  columns: 2;
   margin: 8px 0 0;
+  padding-left: 24px;
 }
 
 .word-review li {
-  padding: 4px 0;
+  padding: 6px 8px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.word-review li:hover {
+  background: #f3f4f6;
+}
+
+.word-review li.is-current {
+  background: #e6efff;
+  font-weight: 600;
+}
+
+.word-review-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.btn-small {
+  padding: 6px 12px;
+  font-size: 13px;
+}
+
+.lock-panel {
+  margin-top: 8px;
+}
+
+.lock-hint {
+  color: var(--muted);
+  margin: 0 0 10px;
+}
+
+.lock-row {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.lock-row input {
+  padding: 9px 12px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  font-size: 15px;
+  width: 160px;
+}
+
+.lock-error {
+  display: inline-block;
+  margin-top: 8px;
+  color: #991b1b;
+  font-size: 14px;
 }
