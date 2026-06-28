@@ -198,6 +198,33 @@ a {
   margin: -8px 0 18px;
 }
 
+.speed-options {
+  display: flex;
+  gap: 6px;
+}
+
+.speed-btn {
+  flex: 1;
+  padding: 8px 6px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: #fff;
+  color: var(--text);
+  font-size: 13px;
+  cursor: pointer;
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+.speed-btn:hover {
+  background: #f3f4f6;
+}
+
+.speed-btn.is-active {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: #fff;
+}
+
 .control select {
   padding: 8px 10px;
   border-radius: 8px;
