@@ -5,6 +5,13 @@ import { materials } from './materials'
 // 「本份词条」答案区的查看密码（仅作软性遮挡，防止孩子直接看答案）
 const ANSWER_PASSWORD = '8604'
 
+// 朗读语速档位
+const RATE_OPTIONS = [
+  { label: '0.25 倍速', value: 0.25 },
+  { label: '0.5 倍速', value: 0.5 },
+  { label: '1 倍速', value: 1 },
+]
+
 export function DictationApp() {
   const { supported, speak, cancel } = useSpeech()
 
@@ -17,7 +24,7 @@ export function DictationApp() {
   const lang = active?.file.lang ?? 'zh-CN'
 
   // 朗读设置
-  const [rate, setRate] = useState(0.9)
+  const [rate, setRate] = useState(0.5)
   const [repeat, setRepeat] = useState(2) // 每条读几遍
   const [interval, setIntervalSec] = useState(5) // 条与条之间的间隔（秒）
   const [autoAdvance, setAutoAdvance] = useState(true) // 读完自动进入下一条
@@ -188,17 +195,21 @@ export function DictationApp() {
           </select>
         </label>
 
-        <label className="control">
-          <span>语速 {rate.toFixed(1)}</span>
-          <input
-            type="range"
-            min={0.5}
-            max={1.2}
-            step={0.1}
-            value={rate}
-            onChange={(e) => setRate(Number(e.target.value))}
-          />
-        </label>
+        <div className="control">
+          <span>语速</span>
+          <div className="speed-options">
+            {RATE_OPTIONS.map((o) => (
+              <button
+                key={o.value}
+                type="button"
+                className={`speed-btn ${rate === o.value ? 'is-active' : ''}`}
+                onClick={() => setRate(o.value)}
+              >
+                {o.label}
+              </button>
+            ))}
+          </div>
+        </div>
 
         <label className="control">
           <span>每条遍数 {repeat}</span>

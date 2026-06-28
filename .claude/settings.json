@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "permissions": {
+    "allow": [
+      "Read",
+      "Glob",
+      "Grep",
+      "Bash(ls *)",
+      "Bash(cat *)",
+      "Bash(head *)",
+      "Bash(tail *)",
+      "Bash(wc *)",
+      "Bash(pwd)",
+      "Bash(grep *)",
+      "Bash(rg *)",
+      "Bash(git status *)",
+      "Bash(git log *)",
+      "Bash(git diff *)",
+      "Bash(git show *)",
+      "Bash(git ls-files *)",
+      "Bash(git branch)",
+      "Bash(git branch --show-current)",
+      "Bash(git branch -v)",
+      "Bash(git branch -a)",
+      "Bash(git remote -v)",
+      "Bash(git remote get-url *)",
+      "Bash(npm run typecheck *)",
+      "Bash(npm run build *)",
+      "Bash(node --version)"
+    ]
+  }
+}
